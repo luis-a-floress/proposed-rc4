@@ -14,10 +14,10 @@ def main():
     plain_text = "meet me after the toga party"
     n = 8
     N = 2**n
-    K = "prga"
-    k = len(K)      # Key size in bytes
-    secret_key = list(map(lambda x : ord(x), K))
-    initial_vector = sample(range(N), 4)
+    K = "hello world key"
+    k = 4      # Key size in bytes
+    secret_key = list(map(lambda x : ord(x), sample(K, k)))
+    initial_vector = sample(range(N), k)
     # key = list(range(k))    # Key definition
     key = secret_key + initial_vector    # Key definition
     # S-boxes definition
