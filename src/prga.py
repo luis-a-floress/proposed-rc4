@@ -23,4 +23,4 @@ def prga(sbox1, sbox2, len_plain_text, N):
         key_stream.insert(x, (t1^t2) % N)
         # i actualization
         i = (i+1) % (N//2)
-    return kseq
+    return key_stream
